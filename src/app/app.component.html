@@ -45,11 +45,11 @@
         <p
           *ngFor="let number of numbers"
           [ngClass]="{
-            highlight: num % chosenNum === 0 && chosenNum > 1
+            highlight: num % chosenNumber === 0 && choschosenNumberenNum > 1
           }"
           [ngStyle]="{
             'font-size':
-              number % chosenNum === 0 && chosenNum > 1 ? '30px' : '24px'
+              number % chosenNumber === 0 && chosenNumber > 1 ? '30px' : '24px'
           }"
         >
           {{ num }}
@@ -57,6 +57,6 @@
       </div>
     </div>
 
-    <p>Numbers highlighted above are divisible by {{ chosenNum }}</p>
+    <p>Numbers highlighted above are divisible by {{ chosenNumber }}</p>
   </div>
 </div>
