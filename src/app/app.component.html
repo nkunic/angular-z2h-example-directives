@@ -1,33 +1,35 @@
-<h1>ANGULAR Directives</h1>
+<h1>ANGULAR Directives task</h1>
 
 <div class="example">
   <div class="box">
-    <div class="top">
+    <p>Numbers highlighted above are divisible by {{ chosenNumber }}</p>
+
+    <div class="numbers">
       <div class="buttons">
         <button
           class="success"
-          [ngClass]="{ 'active-btn': chosenNumber === 2 }"
+          [ngClass]="{ active: chosenNumber === 2 }"
           (click)="calculate(2)"
         >
           Numbers divisible by 2
         </button>
         <button
           class="success"
-          [ngClass]="{ 'active-btn': chosenNumber === 3 }"
+          [ngClass]="{ active: chosenNumber === 3 }"
           (click)="calculate(3)"
         >
           Numbers divisible by 3
         </button>
         <button
           class="success"
-          [ngClass]="{ 'active-btn': chosenNumber === 5 }"
+          [ngClass]="{ active: chosenNumber === 5 }"
           (click)="calculate(5)"
         >
           Numbers divisible by 5
         </button>
         <button
           class="success"
-          [ngClass]="{ 'active-btn': chosenNumber === 10 }"
+          [ngClass]="{ active: chosenNumber === 10 }"
           (click)="calculate(10)"
         >
           Numbers divisible by 10
@@ -49,14 +51,15 @@
             highlight: number % chosenNumber === 0 && chosenNumber > 1
           }"
           [ngStyle]="{
-            color:
-              number % chosenNumber === 0 && chosenNumber > 1 ? 'red' : 'black'
+            'font-weight':
+              number % chosenNumber === 0 && chosenNumber > 1
+                ? 'bold'
+                : 'normal'
           }"
         >
           {{ number }}
         </div>
       </div>
     </div>
-    <p>Numbers highlighted above are divisible by {{ chosenNumber }}</p>
   </div>
 </div>
